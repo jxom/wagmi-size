@@ -1,0 +1,39 @@
+{
+  "name": "wagmi-size",
+  "scripts": {
+    "size": "size-limit"
+  },
+  "devDependencies": {
+    "@size-limit/preset-big-lib": "^11.0.1",
+    "size-limit": "^11.0.1",
+    "viem": "^2.0.3",
+    "wagmi": "^2.0.3"
+  },
+  "size-limit": [
+    {
+      "name": "import { createConfig, http } from 'wagmi'",
+      "path": "node_modules/wagmi/dist/esm/exports/index.js",
+      "import": "{ createConfig, http }"
+    },
+    {
+      "name": "import { mainnet } from 'wagmi/chains'",
+      "path": "node_modules/wagmi/dist/esm/exports/chains.js",
+      "import": "{ mainnet }"
+    },
+    {
+      "name": "import { injected } from 'wagmi/connectors'",
+      "path": "node_modules/wagmi/dist/esm/exports/connectors.js",
+      "import": "{ injected }"
+    },
+    {
+      "name": "import { walletConnect } from 'wagmi/connectors'",
+      "path": "node_modules/wagmi/dist/esm/exports/connectors.js",
+      "import": "{ walletConnect }"
+    },
+    {
+      "name": "import { metaMask } from 'wagmi/connectors'",
+      "path": "node_modules/wagmi/dist/esm/exports/connectors.js",
+      "import": "{ metaMask }"
+    }
+  ]
+}
